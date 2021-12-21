@@ -30,3 +30,7 @@ mkisofs.exe -iso-level 4 -udf -r -force-uppercase -duplicates-once -volid "Win11
 ```
 
 erstellt
+
+Wer die Reg-Datei nach dem Booten von einer Standard-ISO-Datei verwenden will, benutzt die Datei bypass_standard_system.reg. Speichern Sie diese auf einem USB-Stick
+
+Die lässt sich Installationssystem über eine Eingabeaufforderung (Shift-F10) importieren. Tippen Sie Notepad ein und bestätigen Sie mit der Enter-Taste. In Notepad geben Sie auf "Datei -> Öffnen", Hinter "Dateityp" stellen Sie "Alle Dateien" ein und navigieren zu dem Ordner, in dem Sie bypass_standard_system.reg gespeichert haben. Wählen Sie im Kontextmenü der reg-Datei "Zusammenführen".
