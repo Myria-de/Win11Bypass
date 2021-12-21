@@ -5,9 +5,9 @@ Eine neue ISO-Datei für die Neuinstallation von Windows 11 auf beliebiger Hardw
 
 Verwendung: mk_bypass_iso.bat ISO-File
 
-Die Batch-Datei extrahiert das ISO mit 7z in den Ordner "ISO".
+**Die Batch-Datei muss in einer Eingabeaufforderung mit administrativen Rechten gestartet werden.**
 
-Danach wird die Datei boot.wim unter "WIM" eingehängt und der Registry-Zweig "WIM\Windows\System32\config\SYSTEM" geladen.
+Die Batch-Datei extrahiert das ISO mit 7z in den Ordner "ISO". Danach wird die Datei boot.wim unter "WIM" eingehängt und der Registry-Zweig "WIM\Windows\System32\config\SYSTEM" geladen.
 
 In die Registry werden dann diese Daten importiert:
 
