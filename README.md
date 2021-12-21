@@ -1,6 +1,8 @@
 # Win11Bypass
 Bypass Windows 11 hardware restrictions (new install)
 
+Eine neue ISO-Datei für die Neuinstallation von Windows 11 auf beliebiger Hardware erstellen.
+
 Verwendung: mk_bypass_iso.bat ISO-File
 
 Die Batch-Datei extrahiert das ISO mit 7z in den Ordner "ISO".
