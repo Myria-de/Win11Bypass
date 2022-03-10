@@ -7,7 +7,7 @@ if not exist "ISO" mkdir ISO
 if not exist "WIM" mkdir WIM
 
 echo ISO extrahieren
-7z x -y %ISOFILENAME% -oISO"
+7z x -y %ISOFILENAME% -oISO
 echo boot.wim einhaengen
 dism /Mount-Image /Imagefile:"ISO\sources\boot.wim" /Index:2 /MountDir:WIM
 echo Registry-Hive laden
