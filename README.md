@@ -34,3 +34,5 @@ erstellt
 Wer die Reg-Datei nach dem Booten von einer Standard-ISO-Datei verwenden will, benutzt die Datei bypass_standard_system.reg. Speichern Sie diese auf einem USB-Stick
 
 Die lässt sich Installationssystem über eine Eingabeaufforderung (Shift-F10) importieren. Tippen Sie Notepad ein und bestätigen Sie mit der Enter-Taste. In Notepad geben Sie auf "Datei -> Öffnen", Hinter "Dateityp" stellen Sie "Alle Dateien" ein und navigieren zu dem Ordner, in dem Sie bypass_standard_system.reg gespeichert haben. Wählen Sie im Kontextmenü der reg-Datei "Zusammenführen".
+
+**Hinweis:** In aktuellen Windows-11-Versionen sind nur die Registry-Werte BypassSecureBootCheck, BypassRAMCheck und BypassTPMCheck in der Datei Winsetup.dll nachweisbar. Die drei genügen offenbar, um auch den CPU-Ckeck zu umgehen. Aber sicherheitshalber sollte man trotzdem weiterhin alle genannten Registry-Werte verwenden.
