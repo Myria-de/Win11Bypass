@@ -7,6 +7,11 @@ Verwendung: mk_bypass_iso.bat ISO-File
 
 **Die Batch-Datei muss in einer Eingabeaufforderung mit administrativen Rechten gestartet werden.**
 
+**Changelog Version 1.2:** 
+
+- bessere Behandlung von Fehlern in mk_bypass_iso.bat 
+- Neue Option "SET USEREG=" bei "yes" werden die Registry-Paches in die Registry der oot.wim eingetragen. Bei "no" werden die Patches über die Datei unattend_x64.xml angewandt (bitte vorher anpassen, siehe Kommentare in der XML-Datei), die als Autounattend.xml in das ISO kopiert wird. 
+
 Die Batch-Datei extrahiert das ISO mit 7z in den Ordner "ISO". Danach wird die Datei boot.wim unter "WIM" eingehängt und der Registry-Zweig "WIM\Windows\System32\config\SYSTEM" geladen.
 
 In die Registry werden dann diese Daten importiert:
