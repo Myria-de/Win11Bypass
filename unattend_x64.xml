@@ -83,8 +83,8 @@
                 <LocalAccounts>
                     <LocalAccount wcm:action="add">                        
                     <!-- Gewünschten Benutzernamen hier eintragen -->
-                        <Name>te</Name>
-                        <DisplayName>te</DisplayName>
+                        <Name>User</Name>
+                        <DisplayName>User</DisplayName>
                         <Group>Administrators;Power Users</Group>
                         <Password>
                             <Value>UABhAHMAcwB3AG8AcgBkAA==</Value>
@@ -98,7 +98,7 @@
 				    <!-- Das Passwort muss nach dem ersten Neustart geändert werden. -->
                     <Order>1</Order>
                     <!-- Gewünschten Benutzernamen hier eintragen -->
-                    <CommandLine>net user "te" /logonpasswordchg:yes</CommandLine>
+                    <CommandLine>net user "User" /logonpasswordchg:yes</CommandLine>
                 </SynchronousCommand>
             </FirstLogonCommands>
         </component>
