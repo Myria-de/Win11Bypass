@@ -44,7 +44,7 @@ Die lässt sich Installationssystem über eine Eingabeaufforderung (Shift-F10) i
 
 ## Automated English translation:
 
-Create a new ISO file for reinstalling Windows 11 on any hardware.
+Create a new ISO file for installing Windows 11 on any hardware.
 
 Usage: mk_bypass_iso.bat ISO_File
 
