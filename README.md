@@ -5,6 +5,8 @@ Eine neue ISO-Datei für die Neuinstallation von Windows 11 auf beliebiger Hardw
 
 Verwendung: mk_bypass_iso.bat ISO-File
 
+**Credits:** mkisofs.exe basiert auf den cdrtools von Jörg Schilling (https://schilytools.sourceforge.net). Es sind Patches von Alex Kopylov enthalten (ursprünglich von bootcd.ru, inzwischen offline).
+
 **Die Batch-Datei muss in einer Eingabeaufforderung mit administrativen Rechten gestartet werden.**
 
 **Changelog Version 1.2:** 
