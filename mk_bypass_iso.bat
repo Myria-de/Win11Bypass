@@ -8,11 +8,11 @@ REM Bei Bedarf anpassen
 SET VOLID="Win11"
 SET ISONAME="Windows_11_bypass.iso"
 REM Patches in die Registry eintragen
-REM SET USEREG=yes
+SET USEREG=yes
 REM *ODER*
 REM Patches anwenden und unbeaufsichtigte Installation
 REM Bitte vorher unattend_x64.xml anpassen.
-SET USEREG=no
+REM SET USEREG=no
 REM *** Konfiguration Ende***
 
 REM German charset
@@ -22,7 +22,7 @@ openfiles > NUL 2>&1
 if NOT %errorlevel% EQU 0 goto NotAdmin 
 goto StartMain
 :NotAdmin 
-echo Fehler: Sie müssen das Script als Administrator starten
+echo Fehler: Sie mÃ¼ssen das Script als Administrator starten
 goto end
 
 :StartMain
@@ -41,7 +41,7 @@ if not exist "WIM" mkdir WIM
 
 if exist "ISO\sources\boot.wim" (
 echo ISO\sources\boot.wim ist bereits vorhanden.
-echo Bitte löschen Sie das Verzeichnis ISO.
+echo Bitte lÃ¶schen Sie das Verzeichnis ISO.
 goto end
 )
 
@@ -50,7 +50,7 @@ echo ISO extrahieren
 if %errorlevel% neq 0 goto error
 
 if "%USEREG%"=="yes" (
-echo boot.wim einhängen
+echo boot.wim einhÃ¤ngen
 
 dism.exe /Mount-Image /Imagefile:"ISO\sources\boot.wim" /Index:2 /MountDir:WIM
 if !errorlevel! neq 0 goto error
@@ -62,10 +62,10 @@ echo Registry-Import
 reg import bypass.reg
 echo Registry-Hive unload
 reg unload HKLM\Z
-echo Änderungen in boot.wim speichern
+echo Ã„nderungen in boot.wim speichern
 Dism /Unmount-image /MountDir:WIM /Commit
 if !errorlevel! neq 0 goto error
-REM Aufräumen
+REM AufrÃ¤umen
 dism /Get-MountedImageInfo
 dism /cleanup-mountpoints
 dism /cleanup-wim
@@ -77,7 +77,7 @@ copy unattend_x64.xml ISO\Autounattend.xml
 )
 
 :mkiso
-echo Jetzt ist Gelegenheit, Dateien in den Ordner "ISO" hinzuzufügen.
+echo Jetzt ist Gelegenheit, Dateien in den Ordner "ISO" hinzuzufÃ¼gen.
 pause
 mkisofs.exe -iso-level 4 -udf -r -force-uppercase -duplicates-once -volid %VOLID% -hide boot.catalog -hide-udf boot.catalog -b "boot/etfsboot.com" -no-emul-boot -boot-load-size 8 -eltorito-platform efi -b "efi/microsoft/boot/efisys.bin" -no-emul-boot -o %ISONAME% ISO
 goto endok
@@ -95,7 +95,7 @@ goto end
 :error
 echo Abbruch: Es ist ein Fehler aufgetreten: %errorlevel%
 :end
-REM Aufräumen 
+REM AufrÃ¤umen 
 rmdir WIM
 rmdir /S /Q ISO
 endlocal
