@@ -56,6 +56,8 @@ Usage: mk_bypass_iso.bat ISO_File
 
 The batch file must be started in a command prompt with administrative rights.
 
+The bash script mk_Win11_bypass.sh from the folder "Linux" works accordingly under Linux (Ubuntu/Linux Mint). Note the comments in the file and install the necessary tools/packages.
+
 **Changelog version 1.2:**
 
 - better handling of errors in mk_bypass_iso.bat
