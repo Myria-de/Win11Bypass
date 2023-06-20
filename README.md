@@ -5,6 +5,8 @@ Eine neue ISO-Datei für die Neuinstallation von Windows 11 auf beliebiger Hardw
 
 Verwendung: mk_bypass_iso.bat ISO-File
 
+Das Bash-Script mk_Win11_bypass.sh aus dem Ordner "Linux" arbeitet unter Linux (Ubuntu/Linux Mint) entsprechend. Beachten Sie die Kommentare in der Datei und installieren Sie die nötogen Tools/Pakete.
+
 **Credits:** 
 - mkisofs.exe basiert auf den cdrtools von Jörg Schilling (https://schilytools.sourceforge.net). Es sind Patches von Alex Kopylov enthalten (ursprünglich von bootcd.ru, inzwischen offline).
 - 7z.dll und 7z.exe stammen von https://www.7-zip.org
