@@ -3,7 +3,9 @@ Bypass Windows 11 hardware restrictions (new install)
 
 Eine neue ISO-Datei für die Neuinstallation von Windows 11 auf beliebiger Hardware erstellen.
 
-Verwendung: mk_bypass_iso.bat ISO-File
+**Verwendung:** mk_bypass_iso.bat ISO-File
+
+Oder laden Sie [Win 11 Bypass (GUI)](https://github.com/Myria-de/Win11Bypass/releases/download/v1.2/Win11Bypass_v1.2.zip) herunter.
 
 Das Bash-Script mk_Win11_bypass.sh aus dem Ordner "Linux" arbeitet unter Linux (Ubuntu/Linux Mint) entsprechend. Beachten Sie die Kommentare in der Datei und installieren Sie die nötogen Tools/Pakete.
 
