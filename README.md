@@ -48,6 +48,18 @@ Die lässt sich Installationssystem über eine Eingabeaufforderung (Shift-F10) i
 
 **Hinweis:** In aktuellen Windows-11-Versionen sind nur die Registry-Werte BypassSecureBootCheck, BypassRAMCheck und BypassTPMCheck in der Datei Winsetup.dll nachweisbar. Die drei genügen offenbar, um auch den CPU-Check zu umgehen. Aber sicherheitshalber sollte man trotzdem weiterhin alle genannten Registry-Werte verwenden.
 
+## Win11Bypass-GUI
+Starten Sie Win11Bypass.exe und wählen Sie die Original-ISO-Datei von Windows 11 aus. Klicken Sie auf „Antwortdatei anpassen“ und tragen Sie den Benutzernamen für ein lokales Konto und ein Passwort ein. Vergeben Sie außerdem einen Namen für den Rechner und die Netzwerk-Arbeitsgruppe. Für Letztere tragen Sie *Workgroup* ein, wenn Sie in Ihrem Netzwerk nichts anderes verwenden. Klicken Sie auf „Datei speichern“ und dann auf „ISO-Datei erstellen“.
+
+Win 11 Bypass extrahiert den Inhalt der ISO-Datei, baut die Antwortdatei für die automatische Installation ein und pausiert dann. Bei Bedarf haben Sie dadurch Gelegenheit, weitere Dateien in den Ordner "Win11Bypass\Tools\Bypass\ISO" zu kopieren, etwa Setup-Programme für Treiber. Ist das erledigt, drücken Sie im Fenster der Eingabeaufforderung eine beliebige Taste. Anschließend wird die ISO-Datei mit dem Namen „Windows_11_bypass.iso“ erstellt. Verwenden Sie diese etwa auf einem mit Ventoy (https://www.ventoy.net) präparierten USB-Stick für die Neuinstallation von Windows 11.
+
+Win 11 Bypass verwendet Reg- und Batch-Dateien aus dem Ordner "Tools/Bypass". Sie können die Dateien anpassen und damit die Funktionen des Tools beeinflussen.
+
+**Inplace-Update:** Wenn Sie ein Funktionsupdate auf nicht offiziell unterstützter Hardware durchführen möchten, klicken Sie auf der Registerkarte "Win11-Bypass-ISO" auf "Reg-Datei importieren". Dafür müssen Sie kein angepasstes ISO erstellen. Sie können die Original-ISO-Datei von Microsoft für das Update verwenden. Binden Sie die ISO-Datei im Windows-Explorer über den Kontextmenüpunkt "Bereitstellen" in das Dateisystem ein und starten Sie Setup.exe.
+
+<img width="575" height="553" alt="Win11Bypass" src="https://github.com/user-attachments/assets/fd815752-adbb-4657-aa6c-a7c1b7ba04d0" />
+
+
 ## Automated English translation:
 
 Create a new ISO file for installing Windows 11 on any hardware.
