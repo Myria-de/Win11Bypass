@@ -7,7 +7,7 @@ Eine neue ISO-Datei für die Neuinstallation von Windows 11 auf beliebiger Hardw
 
 Oder laden Sie [Win 11 Bypass (GUI)](https://github.com/Myria-de/Win11Bypass/releases/download/v1.2/Win11Bypass_v1.2.zip) herunter.
 
-Das Bash-Script mk_Win11_bypass.sh aus dem Ordner "Linux" arbeitet unter Linux (Ubuntu/Linux Mint) entsprechend. Beachten Sie die Kommentare in der Datei und installieren Sie die nötogen Tools/Pakete.
+Das Bash-Script mk_Win11_bypass.sh aus dem Ordner "Linux" arbeitet unter Linux (Ubuntu/Linux Mint) entsprechend. Beachten Sie die Kommentare in der Datei und installieren Sie die nötigen Tools/Pakete.
 
 **Credits:** 
 - mkisofs.exe basiert auf den cdrtools von Jörg Schilling (https://schilytools.sourceforge.net). Es sind Patches von Alex Kopylov enthalten (ursprünglich von bootcd.ru, inzwischen offline).
