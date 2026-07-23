@@ -53,6 +53,16 @@ Die lässt sich Installationssystem über eine Eingabeaufforderung (Shift-F10) i
 ## Win11Bypass-GUI
 Laden Sie Win11Bypass_v1.2.zip (https://github.com/Myria-de/Win11Bypass/releases/download/v1.2/Win11Bypass_v1.2.zip) herunter. Starten Sie Win11Bypass.exe und wählen Sie die Original-ISO-Datei von Windows 11 aus. Klicken Sie auf "Antwortdatei anpassen" und tragen Sie den Benutzernamen für ein lokales Konto und ein Passwort ein. Vergeben Sie außerdem einen Namen für den Rechner und die Netzwerk-Arbeitsgruppe. Für Letztere tragen Sie *Workgroup* ein, wenn Sie in Ihrem Netzwerk nichts anderes verwenden. Klicken Sie auf „Datei speichern“ und dann auf „ISO-Datei erstellen“.
 
+**Hinweis:** Wenn Sie kein Passwort vergeben, wird der Benutzer nach dem ersten Neustart aufgefordert, ein Passwort festzulegen. Dies wird über 
+```
+net user "USERNAME" /logonpasswordchg:yes
+```
+erreicht. Das hat jedoch eine Nebenwirkung. Das Passwort läuft nach einiger Zeit ab un der Benutzer muss es ändern. Um das zu verhindern, öffnen Sie ein Terminal mit administrativen Rechten und starten
+```
+Set-LocalUser -Name "USERNAME" -PasswordNeverExpires $true
+```
+Ersetzen Sie den Platzhalter "USERNAME" durch die Bezeichnung des Benutzerkontos.
+
 Win 11 Bypass extrahiert den Inhalt der ISO-Datei, baut die Antwortdatei für die automatische Installation ein und pausiert dann. Bei Bedarf haben Sie dadurch Gelegenheit, weitere Dateien in den Ordner "Win11Bypass\Tools\Bypass\ISO" zu kopieren, etwa Setup-Programme für Treiber. Ist das erledigt, drücken Sie im Fenster der Eingabeaufforderung eine beliebige Taste. Anschließend wird die ISO-Datei mit dem Namen „Windows_11_bypass.iso“ erstellt. Verwenden Sie diese etwa auf einem mit Ventoy (https://www.ventoy.net) präparierten USB-Stick für die Neuinstallation von Windows 11.
 
 Win 11 Bypass verwendet Reg- und Batch-Dateien aus dem Ordner "Tools/Bypass". Sie können die Dateien anpassen und damit die Funktionen des Tools beeinflussen.
@@ -104,6 +114,16 @@ Note: In current Windows 11 versions, only the registry values BypassSecureBootC
 
 ## Win11Bypass GUI
 Download Win11Bypass_v1.2.zip (https://github.com/Myria-de/Win11Bypass/releases/download/v1.2/Win11Bypass_v1.2.zip). Launch Win11Bypass.exe and select the original Windows 11 ISO file. Click on  "Antwortdatei anpassen" ("Customise response file") and enter a username for a local account and a password. Also, assign a name for the computer and the network workgroup. For the latter, enter *Workgroup* if you do not use anything else on your network. Click on "Datei speichern" ("Save File") and then on "ISO-Datei erstellen" ("Create ISO File").
+
+**Note:** If you do not set a password, the user will be prompted to set one after the first restart. This is achieved using
+```
+net user ‘USERNAME’ /logonpasswordchg:yes
+```
+However, this has a side effect: the password will expire after a certain period of time and the user will be required to change it. To prevent this, open a terminal with administrative privileges and run
+```
+Set-LocalUser -Name "USERNAME" -PasswordNeverExpires $true
+```
+Replace the placeholder "USERNAME" with the name of the user account.
 
 Win 11 Bypass extracts the contents of the ISO file, embeds the response file for automatic installation, and then pauses. If necessary, this gives you the opportunity to copy additional files into the ‘Win11Bypass\Tools\Bypass\ISO’ folder, such as driver setup programmes. Once this is done, press any key in the command prompt window. The ISO file will then be created with the name ‘Windows_11_bypass.iso’. Use this, for example, on a USB stick prepared with Ventoy (https://www.ventoy.net) to reinstall Windows 11.
 
