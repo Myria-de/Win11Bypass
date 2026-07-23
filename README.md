@@ -117,7 +117,7 @@ Download Win11Bypass_v1.2.zip (https://github.com/Myria-de/Win11Bypass/releases/
 
 **Note:** If you do not set a password, the user will be prompted to set one after the first restart. This is achieved using
 ```
-net user ‘USERNAME’ /logonpasswordchg:yes
+net user "USERNAME" /logonpasswordchg:yes
 ```
 However, this has a side effect: the password will expire after a certain period of time and the user will be required to change it. To prevent this, open a terminal with administrative privileges and run
 ```
